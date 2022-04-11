@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "koton.api", "kotonapi\koton.api.csproj", "{59F4DD51-372B-4E8D-9E64-A415FDCC046D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Subscriber", "Subscriber\Subscriber.csproj", "{17333366-7E4C-40FE-AB09-84E60ECF0927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59F4DD51-372B-4E8D-9E64-A415FDCC046D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F4DD51-372B-4E8D-9E64-A415FDCC046D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F4DD51-372B-4E8D-9E64-A415FDCC046D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F4DD51-372B-4E8D-9E64-A415FDCC046D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17333366-7E4C-40FE-AB09-84E60ECF0927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17333366-7E4C-40FE-AB09-84E60ECF0927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17333366-7E4C-40FE-AB09-84E60ECF0927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17333366-7E4C-40FE-AB09-84E60ECF0927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {51EBA448-64CA-400D-BB38-3325273F86DD}
+	EndGlobalSection
+EndGlobal

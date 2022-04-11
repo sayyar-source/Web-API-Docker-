@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Sayyar63"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+  koton-app:
+    build: 
+      context: .
+      args:
+        buildnbinfo: 1
+    environment:
+      DbServer: "ms-sql-server"
+      DbPort: "1433"
+      DbUser: "SA"
+      Password: "Sayyar63"
+      Database: "KotonDB"
+    ports: 
+      - "8090:80"
+  rabbitmq: # login guest:guest
+    image: rabbitmq:3-management
+    hostname: "rabbitmq"
+    labels:
+      NAME: "rabbitmq"
+    ports:
+    - "4369:4369"
+    - "5671:5671"
+    - "5672:5672"
+    - "25672:25672"
+    - "15671:15671"
+    - "15672:15672"

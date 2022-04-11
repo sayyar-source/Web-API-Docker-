@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "54faae7f-76ae-46a5-a3c8-42894a65467a",
+		"name": "kotonapi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAllProduct",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/Order/getall",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"Order",
+						"getall"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8090/api/Order/getproduct?Id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"Order",
+						"getproduct"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 1,\r\n  \"quantity\": 5,\r\n  \"stock\": 50,\r\n  \"customer\": {\r\n    \"customerId\": \"3\",\r\n    \"addressId\": \"5\"\r\n  },\r\n  \"billing\": {\r\n    \"itemPrice\": 100,\r\n    \"discount\": [\r\n      {\r\n        \"code\": \"SPRING30\",\r\n      \t\"type\": \"fixed_amount\",\r\n        \"amount\": \"30.00\"\r\n      }\r\n    ],\r\n    \"taxes\": [\r\n      {\r\n        \"rate\": 0.06,\r\n        \"price\": 11.94,\r\n      \t\"title\": \"State Tax\"\r\n      }\r\n    ],\r\n    \"totalCost\": 15.34\r\n  },\r\n  \"status\": \"success\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8090/api/Order/createorder",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"Order",
+						"createorder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
